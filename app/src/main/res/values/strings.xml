@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Oracly</string>
     <string name="sign_out">Sign Out</string>
+    <string name="settings">Settings</string>
 </resources>
