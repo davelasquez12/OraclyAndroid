@@ -1,4 +1,4 @@
-package com.oracly;
+package com.oracly.ui.home;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,14 +11,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
+import com.oracly.R;
 
-public class MainFragment extends Fragment
+
+public class HomeFragment extends Fragment
 {
 	private Toolbar mToolbar;
 	private ViewPager mViewPager;
 	private TabLayout mTabLayout;
 	private ProgressBar mProgressBar;
-	private MainVPAdapter mMainVPAdapter;
+	private HomeVPAdapter mHomeVPAdapter;
 	
 	
 	@Override
@@ -27,7 +29,7 @@ public class MainFragment extends Fragment
 		super.onCreate(savedInstanceState);
 		setRetainInstance(true);
 		setHasOptionsMenu(true);
-		mMainVPAdapter = new MainVPAdapter(getChildFragmentManager());
+		mHomeVPAdapter = new HomeVPAdapter(getChildFragmentManager());
 	}
 	
 	@Nullable
@@ -46,7 +48,7 @@ public class MainFragment extends Fragment
 	
 	private void setupViewPager()
 	{
-		mViewPager.setAdapter(mMainVPAdapter);
+		mViewPager.setAdapter(mHomeVPAdapter);
 		mViewPager.setCurrentItem(0);
 		mTabLayout.setupWithViewPager(mViewPager);
 		

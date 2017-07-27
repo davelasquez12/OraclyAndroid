@@ -1,17 +1,15 @@
-package com.oracly;
+package com.oracly.ui.home;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity
+import com.oracly.R;
+
+public class HomeActivity extends AppCompatActivity
 {
 	public static final String MAIN_FRAGMENT_TAG = "main_fragment_tag";
-	private MainFragment mMainFragment;
+	private HomeFragment mHomeFragment;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -20,13 +18,13 @@ public class MainActivity extends AppCompatActivity
 		setContentView(R.layout.activity_main);
 		
 		FragmentManager fm = getSupportFragmentManager();
-		mMainFragment =  (MainFragment) fm.findFragmentByTag(MAIN_FRAGMENT_TAG);
+		mHomeFragment =  (HomeFragment) fm.findFragmentByTag(MAIN_FRAGMENT_TAG);
 		
-		if(mMainFragment == null)
+		if(mHomeFragment == null)
 		{
-			mMainFragment = new MainFragment();
+			mHomeFragment = new HomeFragment();
 			fm.beginTransaction()
-					.add(R.id.activity_main, mMainFragment, MAIN_FRAGMENT_TAG)
+					.add(R.id.activity_main, mHomeFragment, MAIN_FRAGMENT_TAG)
 					.commit();
 			
 			//load data here

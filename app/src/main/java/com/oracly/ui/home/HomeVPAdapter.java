@@ -1,17 +1,20 @@
-package com.oracly;
+package com.oracly.ui.home;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.view.ViewGroup;
 
+import com.oracly.ui.home.games.CurrentGamesTabFragment;
+import com.oracly.ui.home.games.RankingTabFragment;
 
-public class MainVPAdapter extends FragmentStatePagerAdapter
+
+public class HomeVPAdapter extends FragmentStatePagerAdapter
 {
-	private String[] mTabTitles = {"Current Games", "Oracles"};
+	private String[] mTabTitles = {"Current Games", "Oracles", "Ranking"};
 	private Fragment[] mRegisteredFrags = new Fragment[mTabTitles.length];
 	
-	public MainVPAdapter(FragmentManager fm)
+	public HomeVPAdapter(FragmentManager fm)
 	{
 		super(fm);
 	}
@@ -20,9 +23,11 @@ public class MainVPAdapter extends FragmentStatePagerAdapter
 	public Fragment getItem(int position)
 	{
 		if(position == 0)
-			return new CurrentGamesFragment();
-		else
+			return new CurrentGamesTabFragment();
+		else if(position == 1)
 			return new OraclesTabFragment();
+		else
+			return new RankingTabFragment();
 	}
 	
 	@Override
