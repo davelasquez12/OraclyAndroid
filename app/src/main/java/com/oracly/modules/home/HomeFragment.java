@@ -1,4 +1,4 @@
-package com.oracly.ui.home;
+package com.oracly.modules.home;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

@@ -1,12 +1,12 @@
-package com.oracly.ui.home;
+package com.oracly.modules.home;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.view.ViewGroup;
 
-import com.oracly.ui.home.games.CurrentGamesTabFragment;
-import com.oracly.ui.home.games.RankingTabFragment;
+import com.oracly.modules.home.games.CurrentGamesTabFragment;
+import com.oracly.modules.home.games.RankingTabFragment;
 
 
 public class HomeVPAdapter extends FragmentStatePagerAdapter

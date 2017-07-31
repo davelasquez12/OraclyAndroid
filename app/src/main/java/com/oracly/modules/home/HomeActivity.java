@@ -1,4 +1,4 @@
-package com.oracly.ui.home;
+package com.oracly.modules.home;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
