@@ -16,11 +16,13 @@ public class NBAGame extends TeamGame
 	
 	public NBAGame() {}
 	
-	public NBAGame(Team homeTeam, Team awayTeam, League league, GameStatus gameStatus,
-				   int gameId, DateTime gameDate, String gameDateTimeUTC, String gameDateHyphensUTC,
-				   String quarter, String timeLeft, String playoffHeaderLong, String playoffHeaderShort)
+	public NBAGame(int gameId, Team homeTeam, Team awayTeam, League league, String homeTeamScore,
+				   String awayTeamScore, GameStatus gameStatus, DateTime gameDate,
+				   String gameDateTimeUTC, String gameDateHyphensUTC, String quarter,
+				   String timeLeft, String playoffHeaderLong, String playoffHeaderShort)
 	{
-		super(homeTeam, awayTeam, league, gameStatus, gameId, gameDate, gameDateTimeUTC, gameDateHyphensUTC);
+		super(gameId, homeTeam, awayTeam, league, homeTeamScore, awayTeamScore, gameStatus,
+				gameDate, gameDateTimeUTC, gameDateHyphensUTC);
 		mQuarter = quarter;
 		mTimeLeft = timeLeft;
 		mPlayoffHeaderLong = playoffHeaderLong;

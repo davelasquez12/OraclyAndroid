@@ -9,15 +9,14 @@ public class Team
 	private String mNameShort;
 	private String mNameLong;
 	private String mLogoSrc;
-	private String mScore, mRecord;
+	private String mRecord;
 	private boolean mIsHome;
 	
-	public Team(String nameShort, String nameLong, String logoSrc, String score, String record, boolean isHome)
+	public Team(String nameShort, String nameLong, String logoSrc, String record, boolean isHome)
 	{
 		mNameShort = nameShort;
 		mNameLong = nameLong;
 		mLogoSrc = logoSrc;
-		mScore = score;
 		mRecord = record;
 		mIsHome = isHome;
 	}
@@ -52,15 +51,6 @@ public class Team
 		mLogoSrc = logoSrc;
 	}
 	
-	public String getScore()
-	{
-		return mScore;
-	}
-	
-	public void setScore(String score)
-	{
-		mScore = score;
-	}
 	
 	public String getRecord()
 	{

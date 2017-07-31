@@ -12,15 +12,19 @@ import org.joda.time.DateTime;
 public abstract class TeamGame extends Game
 {
 	private Team mHomeTeam, mAwayTeam;
+	private String mHomeTeamScore, mAwayTeamScore;
 	
 	public TeamGame() {}
 	
-	public TeamGame(Team homeTeam, Team awayTeam, League league, GameStatus gameStatus, int gameId,
-					DateTime gameDate, String gameDateTimeUTC, String gameDateHyphensUTC)
+	public TeamGame(int gameId, Team homeTeam, Team awayTeam, League league, String homeTeamScore,
+					String awayTeamScore, GameStatus gameStatus,  DateTime gameDate,
+					String gameDateTimeUTC, String gameDateHyphensUTC)
 	{
-		super(gameStatus, league, gameId, gameDate, gameDateTimeUTC, gameDateHyphensUTC);
+		super(gameId, gameStatus, league , gameDate, gameDateTimeUTC, gameDateHyphensUTC);
 		mHomeTeam = homeTeam;
 		mAwayTeam = awayTeam;
+		mHomeTeamScore = homeTeamScore;
+		mAwayTeamScore = awayTeamScore;
 	}
 	
 	public Team getHomeTeam()
@@ -41,5 +45,25 @@ public abstract class TeamGame extends Game
 	public void setAwayTeam(Team awayTeam)
 	{
 		mAwayTeam = awayTeam;
+	}
+	
+	public String getHomeTeamScore()
+	{
+		return mHomeTeamScore;
+	}
+	
+	public void setHomeTeamScore(String homeTeamScore)
+	{
+		mHomeTeamScore = homeTeamScore;
+	}
+	
+	public String getAwayTeamScore()
+	{
+		return mAwayTeamScore;
+	}
+	
+	public void setAwayTeamScore(String awayTeamScore)
+	{
+		mAwayTeamScore = awayTeamScore;
 	}
 }

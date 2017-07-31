@@ -11,21 +11,25 @@ import org.joda.time.DateTime;
 
 public abstract class Game
 {
-	protected GameStatus mGameStatus;
-	protected League mLeague;
-	protected int mGameId;
-	protected DateTime mGameDate;
-	protected String mGameDateHyphensUTC; //Formatted as: "yyyy-MM-dd"
-	protected String mGameDateTimeUTC;	//Shows the datetime in the format: "yyyy-MM-dd'T'HH:mm'Z'"
+	private GameStatus mGameStatus;
+	private League mLeague;
+	private int mGameId;
+	private DateTime mGameDate;
+	private String mGameDateHyphensUTC; //Formatted as: "yyyy-MM-dd"
+	private String mGameDateTimeUTC;	//Shows the datetime in the format: "yyyy-MM-dd'T'HH:mm'Z'"
+	private int mTotalUsersWhoPredicted;
+	private int mTotalPredictions;
+	//@Exclude //Uncomment when Firebase is setup
+	private OracleGame mOracleGame;
 	
 	public Game() {}
 	
-	public Game(GameStatus gameStatus, League league, int gameId, DateTime gameDate,
+	public Game(int gameId, GameStatus gameStatus, League league , DateTime gameDate,
 				String gameDateTimeUTC, String gameDateHyphensUTC)
 	{
+		mGameId = gameId;
 		mGameStatus = gameStatus;
 		mLeague = league;
-		mGameId = gameId;
 		mGameDate = gameDate;
 		mGameDateHyphensUTC = gameDateHyphensUTC;
 		mGameDateTimeUTC = gameDateTimeUTC;
@@ -89,5 +93,35 @@ public abstract class Game
 	public void setGameDateTimeUTC(String gameDateTimeUTC)
 	{
 		mGameDateTimeUTC = gameDateTimeUTC;
+	}
+	
+	public int getTotalUsersWhoPredicted()
+	{
+		return mTotalUsersWhoPredicted;
+	}
+	
+	public void setTotalUsersWhoPredicted(int totalUsersWhoPredicted)
+	{
+		mTotalUsersWhoPredicted = totalUsersWhoPredicted;
+	}
+	
+	public int getTotalPredictions()
+	{
+		return mTotalPredictions;
+	}
+	
+	public void setTotalPredictions(int totalPredictions)
+	{
+		mTotalPredictions = totalPredictions;
+	}
+	
+	public OracleGame getOracleGame()
+	{
+		return mOracleGame;
+	}
+	
+	public void setOracleGame(OracleGame oracleGame)
+	{
+		mOracleGame = oracleGame;
 	}
 }
