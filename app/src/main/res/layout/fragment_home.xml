@@ -14,17 +14,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <include layout="@layout/oracly_toolbar"/>
+            <include layout="@layout/home_toolbar"/>
 
             <android.support.design.widget.TabLayout
-                android:id="@+id/tab_layout_main"
+                android:id="@+id/tab_layout_home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimaryDark"/>
         </android.support.design.widget.AppBarLayout>
 
         <android.support.v4.view.ViewPager
-            android:id="@+id/viewpager_main"
+            android:id="@+id/viewpager_home"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
@@ -39,7 +39,7 @@
     </LinearLayout>
 
     <ProgressBar
-        android:id="@+id/progress_bar_main"
+        android:id="@+id/progress_bar_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

@@ -1,13 +1,17 @@
 package com.oracly.modules.login;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.oracly.R;
+import com.oracly.modules.home.HomeActivity;
+import com.oracly.modules.home.HomeFragment;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -28,6 +32,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView
 	protected void onCreate(@Nullable Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_login);
 		ButterKnife.inject(this);
 		mLoginPresenter = new LoginPresenterImpl(this);
 	}
@@ -53,19 +58,22 @@ public class LoginActivity extends AppCompatActivity implements LoginView
 	@Override
 	public void onLoginSuccessful()
 	{
-		
+		HomeFragment.isUserLoggedIn = true;
+		Intent intent = new Intent(this, HomeActivity.class);
+		startActivity(intent);
+		finish();
 	}
 	
 	@Override
 	public void onLoginFailed()
 	{
-		
+		Toast.makeText(this, "Failed to login.", Toast.LENGTH_SHORT).show();
 	}
 	
 	@OnClick(R.id.login_button)
 	public void onLoginButtonClicked()
 	{
-		String email = mLoginEmailET.getText().toString();
+		String email = mLoginEmailET.getText().toString().trim();
 		String password = mPasswordET.getText().toString();
 		mLoginPresenter.validateLogin(email, password);
 	}

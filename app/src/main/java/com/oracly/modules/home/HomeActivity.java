@@ -15,7 +15,7 @@ public class HomeActivity extends AppCompatActivity
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_home);
 		
 		FragmentManager fm = getSupportFragmentManager();
 		mHomeFragment =  (HomeFragment) fm.findFragmentByTag(MAIN_FRAGMENT_TAG);
@@ -24,7 +24,7 @@ public class HomeActivity extends AppCompatActivity
 		{
 			mHomeFragment = new HomeFragment();
 			fm.beginTransaction()
-					.add(R.id.activity_main, mHomeFragment, MAIN_FRAGMENT_TAG)
+					.add(R.id.activity_home, mHomeFragment, MAIN_FRAGMENT_TAG)
 					.commit();
 			
 			//load data here
