@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.oracly.R;
 import com.oracly.modules.home.HomeActivity;
 import com.oracly.modules.home.HomeFragment;
+import com.oracly.modules.signup.SignUpActivity;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -71,10 +72,17 @@ public class LoginActivity extends AppCompatActivity implements LoginView
 	}
 	
 	@OnClick(R.id.login_button)
-	public void onLoginButtonClicked()
+	protected void onLoginButtonClicked()
 	{
 		String email = mLoginEmailET.getText().toString().trim();
 		String password = mPasswordET.getText().toString();
 		mLoginPresenter.validateLogin(email, password);
+	}
+	
+	@OnClick(R.id.login_signup_button)
+	protected void onSignUpButtonClicked()
+	{
+		Intent i = new Intent(this, SignUpActivity.class);
+		startActivity(i);
 	}
 }

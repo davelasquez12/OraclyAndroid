@@ -15,12 +15,13 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/login_email_edit_text"
+            android:id="@+id/signup_username_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email or Username"
+            android:hint="Username"
+            android:inputType="text"
             android:textColor="@color/green"
-            tools:text="oracly@gmail.com"/>
+            tools:text=""/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -28,31 +29,33 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/login_password_edit_text"
+            android:id="@+id/signup_email_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/green"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/signup_password_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
             android:inputType="textPassword"
-            android:textColor="@color/green"
-            tools:text="password"/>
+            android:textColor="@color/green"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.v7.widget.AppCompatButton
-        android:id="@+id/login_button"
+        android:id="@+id/signup_create_account_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Login"
+        android:text="Create Account"
         android:textColor="@color/white"
         app:backgroundTint="@color/green"/>
-
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/login_signup_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="No Account? Sign Up!"
-        android:textColor="@color/white"
-        app:backgroundTint="@color/orange"/>
-
 </LinearLayout>
