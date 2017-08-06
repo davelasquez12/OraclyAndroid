@@ -11,7 +11,7 @@ import com.oracly.modules.home.games.RankingTabFragment;
 
 public class HomeVPAdapter extends FragmentStatePagerAdapter
 {
-	private String[] mTabTitles = {"Current Games", "Oracles", "Ranking"};
+	private String[] mTabTitles = {"Games", "Oracles", "Ranking"};
 	private Fragment[] mRegisteredFrags = new Fragment[mTabTitles.length];
 	
 	public HomeVPAdapter(FragmentManager fm)
