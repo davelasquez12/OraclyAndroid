@@ -7,4 +7,135 @@
     android:background="@color/dark_white"
     android:clickable="true">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/descensus_header_temp"/>
+
+        <ImageButton
+            android:id="@+id/settings_button_nav_drawer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_settings_icon"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:layout_gravity="top|end"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/nfl_item_nav_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/list_league_item_padding_nav_drawer">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/nfl_logo"
+            android:layout_marginRight="@dimen/list_league_item_logo_and_text_spacing_nav_drawer"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NFL"
+            android:layout_gravity="center"
+            android:textColor="@color/list_league_nav_drawer_item_text_color"
+            android:textSize="@dimen/list_league_item_text_size_nav_drawer"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nba_item_nav_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/list_league_item_padding_nav_drawer">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/nba_logo"
+            android:layout_marginRight="@dimen/list_league_item_logo_and_text_spacing_nav_drawer"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NBA"
+            android:layout_gravity="center"
+            android:textColor="@color/list_league_nav_drawer_item_text_color"
+            android:textSize="@dimen/list_league_item_text_size_nav_drawer"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mlb_item_nav_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/list_league_item_padding_nav_drawer">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/mlb_logo"
+            android:layout_marginRight="@dimen/list_league_item_logo_and_text_spacing_nav_drawer"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MLB"
+            android:layout_gravity="center"
+            android:textColor="@color/list_league_nav_drawer_item_text_color"
+            android:textSize="@dimen/list_league_item_text_size_nav_drawer"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nhl_item_nav_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/list_league_item_padding_nav_drawer">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/nhl_logo"
+            android:layout_marginRight="@dimen/list_league_item_logo_and_text_spacing_nav_drawer"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NHL"
+            android:layout_gravity="center"
+            android:textColor="@color/list_league_nav_drawer_item_text_color"
+            android:textSize="@dimen/list_league_item_text_size_nav_drawer"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ncaaf_item_nav_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/list_league_item_padding_nav_drawer">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ncaa_logo"
+            android:layout_marginRight="@dimen/list_league_item_logo_and_text_spacing_nav_drawer"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NCAAF"
+            android:layout_gravity="center"
+            android:textColor="@color/list_league_nav_drawer_item_text_color"
+            android:textSize="@dimen/list_league_item_text_size_nav_drawer"/>
+    </LinearLayout>
+
 </LinearLayout>

@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     android:background="@color/green"
-    app:titleTextColor="@color/dark_white">
+    app:titleTextColor="@color/dark_white"
+    app:contentInsetStartWithNavigation="0dp">
 
 </android.support.v7.widget.Toolbar>

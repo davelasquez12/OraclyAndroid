@@ -9,8 +9,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import com.oracly.R;
+
+import butterknife.ButterKnife;
+import butterknife.InjectView;
 
 /**
  * Created by David on 8/6/2017.
@@ -19,6 +24,12 @@ import com.oracly.R;
 public class HomeNavDrawerFragment extends Fragment
 {
 	private ActionBarDrawerToggle mDrawerToggle;
+	@InjectView(R.id.nfl_item_nav_drawer) protected LinearLayout mNFLItem;
+	@InjectView(R.id.nba_item_nav_drawer) protected LinearLayout mNBAItem;
+	@InjectView(R.id.mlb_item_nav_drawer) protected LinearLayout mMLBItem;
+	@InjectView(R.id.nhl_item_nav_drawer) protected LinearLayout mNHLItem;
+	@InjectView(R.id.ncaaf_item_nav_drawer) protected LinearLayout mNCAAFItem;
+	@InjectView(R.id.settings_button_nav_drawer) protected ImageButton mSettingsBtn;
 	
 	@Override
 	public void onCreate(@Nullable Bundle savedInstanceState)
@@ -31,6 +42,7 @@ public class HomeNavDrawerFragment extends Fragment
 	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
 	{
 		View view = inflater.inflate(R.layout.fragment_home_nav_drawer, container, false);
+		ButterKnife.inject(this, view);
 		return view;
 	}
 	

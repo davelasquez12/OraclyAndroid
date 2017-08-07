@@ -15,4 +15,5 @@
     <color name="orange">#FF8552</color>
 
     <color name="list_game_item_text_color">@color/black</color>
+    <color name="list_league_nav_drawer_item_text_color">@color/black</color>
 </resources>
