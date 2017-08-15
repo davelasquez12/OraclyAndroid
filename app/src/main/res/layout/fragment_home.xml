@@ -56,7 +56,7 @@
     
     <fragment
         android:id="@+id/fragment_home_nav_drawer"
-        android:name="com.oracly.modules.home.HomeNavDrawerFragment"
+        android:name="com.oracly.modules.home.nav_drawer.HomeNavDrawerFragment"
         android:layout_width="220dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"

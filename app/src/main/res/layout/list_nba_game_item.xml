@@ -204,16 +204,15 @@
                 android:id="@+id/nba_quarter_time_rem_or_status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
                 android:maxLines="1"
                 android:textColor="@color/list_game_item_text_color"
                 android:textSize="13sp"
                 android:visibility="visible"
                 tools:text="4th  \u2022  11:25"/>
 
-            <!--This comments textview needs to be wrapped in a linearlayout to properly center text-->
             <TextView
                 android:id="@+id/num_comments"
                 android:layout_width="wrap_content"
@@ -249,6 +248,7 @@
                     android:src="@drawable/crystal_ball_icon2"/>
 
                 <TextView
+                    android:id="@+id/num_oracles"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4dp"

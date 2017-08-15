@@ -32,6 +32,15 @@ public class MLBGame extends TeamGame
 		mIsHomeBatting = isHomeBatting;
 	}
 	
+	//Add @Exclude here once Firebase is added as a dependency
+	public boolean isPlayoffGame()
+	{
+		if(mPlayoffHeader.equals(""))
+			return false;
+		
+		return true;
+	}
+	
 	public String getInning()
 	{
 		return mInning;

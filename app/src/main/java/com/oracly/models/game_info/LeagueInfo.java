@@ -2,6 +2,8 @@ package com.oracly.models.game_info;
 
 import android.util.SparseArray;
 
+import com.oracly.R;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -26,6 +28,11 @@ public abstract class LeagueInfo
 	//League Names
 	public final static String NBA_LEAGUE_NAME = "NBA";
 	public final static String MLB_LEAGUE_NAME = "MLB";
+	
+	//Used only for the league list displayed in the Home Navigation Drawer Fragment. These two
+	//arrays must correspond with league name to league icon.
+	public final static String[] LEAGUE_NAME_LIST_NAV_DRAWER = {"NBA", "MLB"};
+	public final static int[] LEAGUE_ICON_SRC_LIST_NAV_DRAWER = {R.drawable.nba_logo, R.drawable.mlb_logo};
 	
 	private final static SparseArray<String> LEAGUE_ID_NAME_MAP = new SparseArray<>();
 	static

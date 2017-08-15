@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/list_item_league_icon_imageview"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/list_league_item_logo_and_text_spacing_nav_drawer"
+        android:layout_marginRight="@dimen/list_league_item_logo_and_text_spacing_nav_drawer"
+        android:contentDescription="@string/league_logo"
+        tools:src="@drawable/nba_logo"
+        android:paddingStart="@dimen/list_league_item_padding_nav_drawer"
+        android:paddingEnd="@dimen/list_league_item_padding_nav_drawer"/>
+
+    <TextView
+        android:id="@+id/list_item_league_textview"
+        style="?android:listViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="14sp"
+        tools:text="NBA"/>
+
+</LinearLayout>

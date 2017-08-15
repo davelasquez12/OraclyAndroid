@@ -1,16 +1,17 @@
-package com.oracly.modules.home;
+package com.oracly.modules.home.nav_drawer;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 
 import com.oracly.R;
 
@@ -24,12 +25,9 @@ import butterknife.InjectView;
 public class HomeNavDrawerFragment extends Fragment
 {
 	private ActionBarDrawerToggle mDrawerToggle;
-	@InjectView(R.id.nfl_item_nav_drawer) protected LinearLayout mNFLItem;
-	@InjectView(R.id.nba_item_nav_drawer) protected LinearLayout mNBAItem;
-	@InjectView(R.id.mlb_item_nav_drawer) protected LinearLayout mMLBItem;
-	@InjectView(R.id.nhl_item_nav_drawer) protected LinearLayout mNHLItem;
-	@InjectView(R.id.ncaaf_item_nav_drawer) protected LinearLayout mNCAAFItem;
-	@InjectView(R.id.settings_button_nav_drawer) protected ImageButton mSettingsBtn;
+	@InjectView(R.id.settings_button_nav_drawer) ImageButton mSettingsBtn;
+	@InjectView(R.id.league_list_nav_drawer_recycler_view) RecyclerView mLeagueListRV;
+	private NavDrawerRecyclerViewAdapter mRVAdapter;
 	
 	@Override
 	public void onCreate(@Nullable Bundle savedInstanceState)
@@ -43,10 +41,14 @@ public class HomeNavDrawerFragment extends Fragment
 	{
 		View view = inflater.inflate(R.layout.fragment_home_nav_drawer, container, false);
 		ButterKnife.inject(this, view);
+		mRVAdapter = new NavDrawerRecyclerViewAdapter();
+		mLeagueListRV.setLayoutManager(new LinearLayoutManager(getContext()));
+		mLeagueListRV.setAdapter(mRVAdapter);
+		mLeagueListRV.setHasFixedSize(true);
 		return view;
 	}
 	
-	void setup(DrawerLayout dl, Toolbar toolbar)
+	public void setup(DrawerLayout dl, Toolbar toolbar)
 	{
 		mDrawerToggle = new ActionBarDrawerToggle(getActivity(), dl, toolbar, R.string.drawer_opened, R.string.drawer_closed)
 		{

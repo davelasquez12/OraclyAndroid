@@ -68,4 +68,13 @@ public class NBAGame extends TeamGame
 	{
 		mPlayoffHeaderShort = playoffHeaderShort;
 	}
+	
+	//Add @Exclude here once Firebase is added as a dependency
+	public boolean isPlayoffGame()
+	{
+		if(mPlayoffHeaderShort.equals(""))
+			return false;
+		
+		return true;
+	}
 }
