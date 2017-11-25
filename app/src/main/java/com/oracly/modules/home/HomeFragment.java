@@ -19,17 +19,17 @@ import com.oracly.R;
 import com.oracly.modules.home.nav_drawer.HomeNavDrawerFragment;
 import com.oracly.modules.login.LoginActivity;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 
 public class HomeFragment extends Fragment implements HomeView
 {
-	@InjectView(R.id.home_toolbar) protected Toolbar mToolbar;
-	@InjectView(R.id.viewpager_home) protected ViewPager mViewPager;
-	@InjectView(R.id.tab_layout_home) protected TabLayout mTabLayout;
-	@InjectView(R.id.progress_bar_home) protected ProgressBar mProgressBar;
-	@InjectView(R.id.home_nav_drawer_layout) protected DrawerLayout mDrawerLayout;
+	@BindView(R.id.home_toolbar) protected Toolbar mToolbar;
+	@BindView(R.id.viewpager_home) protected ViewPager mViewPager;
+	@BindView(R.id.tab_layout_home) protected TabLayout mTabLayout;
+	@BindView(R.id.progress_bar_home) protected ProgressBar mProgressBar;
+	@BindView(R.id.home_nav_drawer_layout) protected DrawerLayout mDrawerLayout;
 	private HomeNavDrawerFragment mDrawerFragment;
 	private HomeVPAdapter mHomeVPAdapter;
 	public static boolean isUserLoggedIn = false;
@@ -51,7 +51,7 @@ public class HomeFragment extends Fragment implements HomeView
 	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
 	{
 		View view = inflater.inflate(R.layout.fragment_home, container, false);
-		ButterKnife.inject(this, view);
+		ButterKnife.bind(this, view);
 		setupToolbar();
 		setupViewPager();
 		setupNavDrawer();

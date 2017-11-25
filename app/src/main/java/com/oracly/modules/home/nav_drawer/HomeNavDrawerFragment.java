@@ -15,8 +15,8 @@ import android.widget.ImageButton;
 
 import com.oracly.R;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * Created by David on 8/6/2017.
@@ -25,8 +25,8 @@ import butterknife.InjectView;
 public class HomeNavDrawerFragment extends Fragment
 {
 	private ActionBarDrawerToggle mDrawerToggle;
-	@InjectView(R.id.settings_button_nav_drawer) ImageButton mSettingsBtn;
-	@InjectView(R.id.league_list_nav_drawer_recycler_view) RecyclerView mLeagueListRV;
+	@BindView(R.id.settings_button_nav_drawer) ImageButton mSettingsBtn;
+	@BindView(R.id.league_list_nav_drawer_recycler_view) RecyclerView mLeagueListRV;
 	private NavDrawerRecyclerViewAdapter mRVAdapter;
 	
 	@Override
@@ -40,9 +40,9 @@ public class HomeNavDrawerFragment extends Fragment
 	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
 	{
 		View view = inflater.inflate(R.layout.fragment_home_nav_drawer, container, false);
-		ButterKnife.inject(this, view);
+		ButterKnife.bind(this, view);
 		mRVAdapter = new NavDrawerRecyclerViewAdapter();
-		mLeagueListRV.setLayoutManager(new LinearLayoutManager(getContext()));
+		mLeagueListRV.setLayoutManager(new LinearLayoutManager(getActivity()));
 		mLeagueListRV.setAdapter(mRVAdapter);
 		mLeagueListRV.setHasFixedSize(true);
 		return view;

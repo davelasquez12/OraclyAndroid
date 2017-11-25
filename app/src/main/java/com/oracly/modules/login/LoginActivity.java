@@ -3,10 +3,8 @@ package com.oracly.modules.login;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.AppCompatButton;
-import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.oracly.R;
@@ -14,8 +12,8 @@ import com.oracly.modules.home.HomeActivity;
 import com.oracly.modules.home.HomeFragment;
 import com.oracly.modules.signup.SignUpActivity;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 
 /**
@@ -26,15 +24,15 @@ public class LoginActivity extends AppCompatActivity implements LoginView
 {
 	private LoginPresenterImpl mLoginPresenter;
 	
-	@InjectView(R.id.login_email_edit_text) protected EditText mLoginEmailET;
-	@InjectView(R.id.login_password_edit_text) protected EditText mPasswordET;
+	@BindView(R.id.login_email_edit_text) protected TextInputEditText mLoginEmailET;
+	@BindView(R.id.login_password_edit_text) protected TextInputEditText mPasswordET;
 	
 	@Override
 	protected void onCreate(@Nullable Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
-		ButterKnife.inject(this);
+		ButterKnife.bind(this);
 		mLoginPresenter = new LoginPresenterImpl(this);
 	}
 	

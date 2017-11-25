@@ -14,8 +14,8 @@ import com.oracly.models.game_models.NBAGame;
 import com.oracly.tools.GameColorSelector;
 import com.squareup.picasso.Picasso;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * Created by David on 8/14/2017.
@@ -23,26 +23,26 @@ import butterknife.InjectView;
 
 public class NBAGameHolder extends GameHolder
 {
-	@InjectView(R.id.home_team_name) protected TextView mHomeTeam;
-	@InjectView(R.id.away_team_name) protected TextView mAwayTeam;
-	@InjectView(R.id.home_team_logo) protected ImageView mHomeTeamLogo;
-	@InjectView(R.id.away_team_logo) protected ImageView mAwayTeamLogo;
-	@InjectView(R.id.home_team_record) protected TextView mHomeTeamRecord;
-	@InjectView(R.id.away_team_record) protected TextView mAwayTeamRecord;
-	@InjectView(R.id.home_team_score) protected TextView mHomeTeamScore;
-	@InjectView(R.id.away_team_score) protected TextView mAwayTeamScore;
-	@InjectView(R.id.playoff_header_text_view) protected TextView mPlayoffHeader;
-	@InjectView(R.id.playoff_header_container) protected LinearLayout mPlayoffContainer;
-	@InjectView(R.id.game_start_time) protected TextView mGameStartTime;
-	@InjectView(R.id.nba_quarter_time_rem_or_status) protected TextView mQuarterTimeRemOrStatus;
-	@InjectView(R.id.num_comments) protected TextView mNumComments;
-	@InjectView(R.id.num_oracles) protected TextView mNumOracles;
+	@BindView(R.id.home_team_name) protected TextView mHomeTeam;
+	@BindView(R.id.away_team_name) protected TextView mAwayTeam;
+	@BindView(R.id.home_team_logo) protected ImageView mHomeTeamLogo;
+	@BindView(R.id.away_team_logo) protected ImageView mAwayTeamLogo;
+	@BindView(R.id.home_team_record) protected TextView mHomeTeamRecord;
+	@BindView(R.id.away_team_record) protected TextView mAwayTeamRecord;
+	@BindView(R.id.home_team_score) protected TextView mHomeTeamScore;
+	@BindView(R.id.away_team_score) protected TextView mAwayTeamScore;
+	@BindView(R.id.playoff_header_text_view) protected TextView mPlayoffHeader;
+	@BindView(R.id.playoff_header_container) protected LinearLayout mPlayoffContainer;
+	@BindView(R.id.game_start_time) protected TextView mGameStartTime;
+	@BindView(R.id.nba_quarter_time_rem_or_status) protected TextView mQuarterTimeRemOrStatus;
+	@BindView(R.id.num_comments) protected TextView mNumComments;
+	@BindView(R.id.num_oracles) protected TextView mNumOracles;
 	
 	
 	public NBAGameHolder(View itemView)
 	{
 		super(itemView);
-		ButterKnife.inject(this, itemView);
+		ButterKnife.bind(this, itemView);
 	}
 	
 	@Override

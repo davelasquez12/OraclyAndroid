@@ -9,8 +9,8 @@ import android.widget.TextView;
 import com.oracly.R;
 import com.squareup.picasso.Picasso;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * Created by David on 8/14/2017.
@@ -18,13 +18,13 @@ import butterknife.InjectView;
 
 class LeagueItemHolder extends RecyclerView.ViewHolder
 {
-	@InjectView(R.id.list_item_league_textview) TextView mLeagueTextView;
-	@InjectView(R.id.list_item_league_icon_imageview) ImageView mLeagueIconImageView;
+	@BindView(R.id.list_item_league_textview) TextView mLeagueTextView;
+	@BindView(R.id.list_item_league_icon_imageview) ImageView mLeagueIconImageView;
 	
 	public LeagueItemHolder(View itemView)
 	{
 		super(itemView);
-		ButterKnife.inject(this, itemView);
+		ButterKnife.bind(this, itemView);
 		
 		itemView.setOnClickListener(new View.OnClickListener() {
 			@Override
